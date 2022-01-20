@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { PokemonTCG } from 'pokemon-tcg-sdk-typescript'
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
 import './App.css';
 
 function App() {
   // variables and states
+  const [ready, setReady] = useState<boolean>(false);
   const [cards, setCards] = useState<any[]>([]);
   const [totalFilteredCards, setTotalFilteredCards] = useState<any[]>([]);
   const [filteredCards, setfilteredCards] = useState<any[]>([]);
@@ -34,6 +36,7 @@ function App() {
         // initial card setup
         setCards(data);
         getCards(data);
+        setReady(true);
         setTotalFilteredCards(data);
         const setData = [];
         const rarityData = [];
@@ -261,6 +264,16 @@ function App() {
     </div>
     </div>
   }
+
+  // display when initially loading for cards 
+  function loading() {
+    if(!ready){
+      return <div className="loading">
+      <CircularProgress />
+    </div>
+    }
+  }
+
   return (
     <div className="App">
       {/* Import Poppins font */}
@@ -388,6 +401,7 @@ function App() {
         <div className="filter-small justify-center">
           <Filters />
         </div>
+        {loading()}
         {/* Card box */}
         <div className="display-flex">
           {filteredCards.map((item, index)=>{
