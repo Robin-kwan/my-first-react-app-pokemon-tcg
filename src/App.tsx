@@ -1,12 +1,14 @@
 import Home from './Home';
 import './App.css';
-
+import ContextProvider from './store/ContextProvider';
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <ContextProvider>
+      <div className="App">
+        <Home />
+      </div>
+    </ContextProvider>
   );
 }
 

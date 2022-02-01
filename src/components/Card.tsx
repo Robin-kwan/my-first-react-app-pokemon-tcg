@@ -1,10 +1,13 @@
 import React from 'react';
+import { useItemContext } from '../store/ContextProvider';
+import { PokemonTCG } from 'pokemon-tcg-sdk-typescript'
 
+interface ExtendedCard extends PokemonTCG.Card {
+    cardmarket?: any
+}
 
 interface ICard {
-    item: any;
-    alreadyInCart: (id: string) => void;
-    addToCart: (item: any) => void;
+    item: ExtendedCard;
 }
 
 // if total card = 0 return Out of Stock. Otherwise, return n Cards
@@ -18,6 +21,7 @@ function totalCard(n: number) {
 }
 
 export const Card: React.FC<ICard> = props => {
+    const { action } = useItemContext();
     return (
         <div className="item-flex-box"> 
             <div className="item-card">
@@ -31,7 +35,7 @@ export const Card: React.FC<ICard> = props => {
                         <div className="dot" />
                         {totalCard(props.item.set.total)}
                     </div>
-                    <button className={`add-to-cart ${((props.item.set.total === 0) || props.alreadyInCart(props.item.id)) ? "disabled-btn" : ""}`} onClick={() => { props.addToCart(props.item)}}>
+                    <button className={`add-to-cart ${((props.item.set.total === 0) || action.alreadyInCart(props.item.id)) ? "disabled-btn" : ""}`} onClick={() => { action.addToCart(props.item)}}>
                         <div className="display-flex">
                             <img src={require("../assets/cart.svg").default} alt="cart-icon" />
                             <span> Add to Cart </span>
