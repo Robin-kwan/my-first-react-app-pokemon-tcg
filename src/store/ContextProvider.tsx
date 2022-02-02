@@ -154,8 +154,7 @@ function ContextProvider({ children }) {
     if (value) {
       return (
         <a onClick={() => setSet("")} className="clear-option" href="/#">
-          {" "}
-          Clear Set{" "}
+          Clear Set
         </a>
       );
     }
@@ -167,8 +166,7 @@ function ContextProvider({ children }) {
     if (value) {
       return (
         <a onClick={() => setRarity("")} className="clear-option" href="/#">
-          {" "}
-          Clear Rarity{" "}
+          Clear Rarity
         </a>
       );
     }
@@ -180,8 +178,7 @@ function ContextProvider({ children }) {
     if (value) {
       return (
         <a onClick={() => setType("")} className="clear-option" href="/#">
-          {" "}
-          Clear Type{" "}
+          Clear Type
         </a>
       );
     }
@@ -251,10 +248,7 @@ function ContextProvider({ children }) {
     },
   };
   return (
-    <ItemContext.Provider value={contextStore}>
-      {" "}
-      {children}{" "}
-    </ItemContext.Provider>
+    <ItemContext.Provider value={contextStore}>{children}</ItemContext.Provider>
   );
 }
 
