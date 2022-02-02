@@ -1,0 +1,129 @@
+.arrow-down {
+  margin-left: 4px;
+  width: 12px;
+}
+
+.clear-option {
+  background-color: #ea7c69 !important;
+  font-weight: 500 !important;
+}
+
+.dropbtn {
+  background-color: #1f1d2b;
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #393c49;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.dropdown:first-child {
+  margin-left: 0px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 180px;
+  border: 1px solid #393c49;
+  border-radius: 8px;
+  z-index: 1;
+  height: 360px;
+  overflow-y: auto;
+}
+
+/* Prevent Type dropdown content from going off the screen */
+@media screen and (max-width: 1400px) {
+  .move-left {
+    margin-left: -80px;
+  }
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #1f1d2b;
+  border: 1px solid #393c49;
+  cursor: pointer;
+}
+
+.selected-option {
+  background-color: #252836 !important;
+}
+
+.dropdown-content a:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.dropdown-content a:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.dropdown-content a:hover {
+  background-color: #252836;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  opacity: 0.8;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+}
+
+// Responsive filter
+.filter-large {
+  display: flex;
+}
+
+.filter-small {
+  display: none;
+}
+
+@media screen and (max-width: 496px) {
+  .filter-large {
+    display: none;
+  }
+
+  .filter-small {
+    display: flex;
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 356px) {
+  .dropdown {
+    margin-left: 8px;
+  }
+}
+
+@media screen and (max-width: 338px) {
+  .dropdown {
+    margin-left: 4px;
+  }
+}

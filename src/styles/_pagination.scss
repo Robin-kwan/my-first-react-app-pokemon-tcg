@@ -1,0 +1,20 @@
+.pagination {
+  margin-top: 16px;
+}
+
+.pagination span {
+  color: #fff;
+  font-size: 14px;
+  margin-left: 6px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.pagination span:hover {
+  opacity: 0.8;
+}
+
+.underlined {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

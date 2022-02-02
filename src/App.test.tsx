@@ -1,10 +1,12 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+// import userEvent from "@testing-library/user-event";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Pokemon/i);
-  expect(linkElement).toBeInTheDocument();
+describe("App", () => {
+  it("check if the page renders", () => {
+    render(<App />);
+    const linkElement = screen.getByText(/Pokemon/i);
+    expect(linkElement).toBeInTheDocument();
+  });
 });
-

@@ -1,0 +1,11 @@
+@import "card.scss", "cart.scss", "filter.scss", "pagination.scss", "home.scss",
+  "layout.scss", "search.scss", "font.scss";
+
+.App {
+  display: flex;
+  justify-content: center;
+  background-color: #252836;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+}

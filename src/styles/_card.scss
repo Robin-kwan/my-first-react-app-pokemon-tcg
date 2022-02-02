@@ -1,0 +1,130 @@
+%font-size {
+  font-size: 12px;
+}
+
+%font-weight {
+  font-weight: 500;
+}
+
+.item-flex-box {
+  @extend %font-size;
+  width: calc(100% / 6);
+}
+
+@media screen and (max-width: 1264px) {
+  .item-flex-box {
+    width: calc(100% / 5);
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .item-flex-box {
+    width: calc(100% / 4);
+  }
+}
+
+@media screen and (max-width: 824px) {
+  .item-flex-box {
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .item-flex-box {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .item-flex-box {
+    width: calc(100% / 1);
+  }
+}
+
+.item-card {
+  padding: 8px;
+  margin-top: 24px;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.item-card img {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item-card .subcard {
+  border-radius: 16px;
+  background-color: #1f1d2b;
+  width: 100%;
+  color: #fff;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  /* padding-top = space taken by the card (40px) + padding around (16px) */
+  padding-top: 56px;
+  margin-top: -40px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.name-box {
+  @extend %font-weight;
+  text-align: center;
+  height: 36px;
+}
+
+.etc-box {
+  color: #abbbc2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.dot {
+  background: rgba(255, 255, 255, 0.08);
+  margin-left: 8px;
+  margin-right: 8px;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+}
+
+.disabled-btn {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.add-to-cart {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.add-to-cart:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.add-to-cart:disabled {
+  opacity: 0.8;
+}
+
+.add-to-cart img {
+  width: 14px;
+  margin-right: 8px;
+}
+
+.add-to-cart span {
+  @extend %font-weight;
+  color: #fff;
+}

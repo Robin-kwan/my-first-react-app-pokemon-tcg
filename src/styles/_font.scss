@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+.header-font {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+@media screen and (max-width: 360px) {
+  .header-font {
+    font-size: 24px;
+  }
+}
+
+.subheader-font {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.white-text {
+  color: #fff !important;
+}
+
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
