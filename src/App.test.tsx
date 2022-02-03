@@ -39,15 +39,9 @@ describe("Search", () => {
     );
   });
   it("check if the search text field renders", () => {
-    const search = screen.getByTestId("searchName");
-    expect(search).toBeInTheDocument();
-    expect(search).toHaveAttribute("type", "text");
-  });
-
-  it("check if function handleNameChange is called every time there is a change in Search field", () => {
-    userEvent.type(screen.getByTestId("searchName"), "Four");
-    expect(screen.getByTestId("searchName")).toHaveValue("Four");
-    expect(value.action.handleNameChange).toHaveBeenCalledTimes(4);
+    expect(screen.getByPlaceholderText("Search by Name")).toHaveValue("");
+    userEvent.type(screen.getByPlaceholderText("Search by Name"), "Four");
+    expect(screen.getByPlaceholderText("Search by Name")).toHaveValue("Four");
   });
 });
 

@@ -13,7 +13,6 @@ export const Search: React.FC = () => {
       />
       <input
         id="searchName"
-        data-testid="searchName"
         type="text"
         className="search-name-input"
         placeholder="Search by Name"
