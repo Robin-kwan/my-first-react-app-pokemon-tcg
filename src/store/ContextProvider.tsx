@@ -3,6 +3,8 @@ import { PokemonTCG } from "pokemon-tcg-sdk-typescript";
 
 const ItemContext = createContext<any>({});
 
+export { ItemContext };
+
 export function useItemContext() {
   return useContext(ItemContext);
 }
@@ -78,7 +80,7 @@ function ContextProvider({ children }) {
   function getData() {
     // get all pokemon cards ( max 250 due to the API )
     PokemonTCG.getAllCards()
-      .then((result: PokemonTCG.Card[]) => {
+      .then(async (result: PokemonTCG.Card[]) => {
         console.log("List of cards");
         console.log(result);
         const data = result;
@@ -231,6 +233,7 @@ function ContextProvider({ children }) {
     drawer,
     cart,
     action: {
+      getData,
       clearSet,
       clearRarity,
       clearType,

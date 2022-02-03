@@ -3,6 +3,7 @@ import { useItemContext } from "../store/ContextProvider";
 
 export const Search: React.FC = () => {
   const { action } = useItemContext();
+
   return (
     <div className="relative display-flex">
       <img
@@ -12,6 +13,7 @@ export const Search: React.FC = () => {
       />
       <input
         id="searchName"
+        data-testid="searchName"
         type="text"
         className="search-name-input"
         placeholder="Search by Name"

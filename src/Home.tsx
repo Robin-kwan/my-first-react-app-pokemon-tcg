@@ -71,13 +71,13 @@ function Home() {
         {/* loading */}
         {!ready && (
           <div className="loading">
-            <CircularProgress />
+            <CircularProgress data-testid="progressCheck" />
           </div>
         )}
         {/* Card displaying */}
         <div className="display-flex">
           {filteredCards.map((item, index) => {
-            return <Card key={index} item={item} />;
+            return <Card key={index} item={item} data-testid="card" />;
           })}
         </div>
         {/* Pagination */}
