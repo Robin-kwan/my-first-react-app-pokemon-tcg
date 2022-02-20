@@ -1,5 +1,7 @@
 # Instruction
 
+source : https://github.com/opn-ooo/opn-th-front-end-challenges/tree/master/take-home
+
 For the first time setup, download or clone this project to your directory and run `npm install` to install modules.
 
 To run the app, run `npm start` and it should appear on `http://localhost:3000/`
